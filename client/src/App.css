@@ -1,12 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Shippori+Mincho&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Shippori+Mincho&display=swap");
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   /* font-family: 'Shippori Mincho', serif; */
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #0000ff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.books {
+  display: flex;
+}
+
+.book {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.book > img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.book > button {
+  padding: 4px 8px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.book > .delete {
+  border: 1px solid rgb(245, 191, 191);
+  color: rgb(242, 100, 100);
+}
+
+.book > .update {
+  border: 1px solid rgb(204, 204, 243);
+  color: rgb(139, 139, 234);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.form > input {
+  width: 60%;
+  height: 30px;
+  padding: 10px;
+  margin: 15px;
+  font-family: "Shippori Mincho", serif;
+}
+
+.form > textarea {
+  padding: 10px;
+}
+
+.form > button {
+  border: none;
+  padding: 10px;
+  background-color: white;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
