@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 app.get("/books", (req, res) => {
   const q = "SELECT * FROM books";
   db.query(q, (err, data) => {
-    if (err) return res.json(err);
+    if(err) return res.json(err);
     return res.json(data);
   });
 });
@@ -46,7 +46,7 @@ app.post("/books", (req, res) => {
     ];
   
     db.query(q, [values], (err, data) => {
-      if (err) return res.send(err);
+      if(err) return res.send(err);
       return res.json(data);
     });
   });
@@ -54,10 +54,10 @@ app.post("/books", (req, res) => {
 //delete book from db
 app.delete("/books/:id", (req, res) => {
   const bookId = req.params.id;
-  const q = " DELETE FROM books WHERE id = ? ";
+  const q = "DELETE FROM books WHERE id = ?";
 
   db.query(q, [bookId], (err, data) => {
-    if (err) return res.send(err);
+    if(err) return res.send(err);
     return res.json(data);
   });
 });
@@ -74,7 +74,7 @@ app.put("/books/:id", (req, res) => {
       req.body.cover,
     ];
   
-    db.query(q, [...values,bookId], (err, data) => {
+    db.query(q, [...values, bookId], (err, data) => {
       if (err) return res.send(err);
       return res.json(data);
     });

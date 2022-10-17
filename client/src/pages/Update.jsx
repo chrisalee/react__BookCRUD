@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Update = () => {
   const [book, setBook] = useState({
-    title: "",
+    title: '',
     desc: "",
     price: null,
     cover: "",
@@ -34,37 +34,41 @@ const Update = () => {
 
   return (
     <div className="form">
-      <h1>Update the Book</h1>
+      <h1>Update Book</h1>
       <input
         type="text"
-        placeholder="Book title"
+        label="Book title"
+        // value={book.title}
         name="title"
         onChange={handleChange}
       />
       <textarea
         rows={5}
         type="text"
-        placeholder="Book desc"
+        label="Book desc"
+        // value={book.desc}
         name="desc"
         onChange={handleChange}
       />
       <input
         type="number"
-        placeholder="Book price"
+        label="Book price"
+        // value={book.price}
         name="price"
         onChange={handleChange}
       />
       <input
         type="text"
-        placeholder="Book cover"
+        label="Book cover"
+        // value={book.cover}
         name="cover"
         onChange={handleChange}
       />
       <button onClick={handleClick}>Update</button>
       {error && "Something went wrong!"}
-      <Link to="/">See all books</Link>
+      <Link to="/" className='homeButton'>See All Books</Link>
     </div>
   )
 }
 
-export default Update
+export default Update;

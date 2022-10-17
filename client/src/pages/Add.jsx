@@ -30,7 +30,6 @@ const Add = () => {
   return (
     <div className="form">
       <h1>Add new Book</h1>
-      <Link to='/'>Back to Homepage</Link>
       <input
         type="text"
         placeholder="title"
@@ -56,7 +55,8 @@ const Add = () => {
         onChange={handleChange}
         name="cover"
       />
-      <button onClick={handleClick}> Add Book</button>
+      <button onClick={handleClick}>Add Book</button>
+      <Link to="/" className="homeButton">See All Books</Link>
     </div>
   );
 };

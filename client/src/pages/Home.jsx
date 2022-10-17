@@ -50,7 +50,7 @@ const Home = () => {
         ))}
       </div>
 
-      <button className="addHome">
+      <button className="addBookButton">
         <Link to="/add" style={{ color: "inherit", textDecoration: "none" }}>
           Add new book
         </Link>

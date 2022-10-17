@@ -13,6 +13,18 @@ body {
   /* font-family: 'Shippori Mincho', serif; */
 }
 
+.app {
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  margin: 50px auto;
+}
+
 a {
   text-decoration: none;
   color: #000000;
@@ -27,6 +39,7 @@ a:hover {
 
 .books {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .book {
@@ -35,18 +48,24 @@ a:hover {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  margin-bottom: 15px;
 }
 
 .book > img {
   width: 200px;
   height: 300px;
   object-fit: cover;
+  background-color: #5f3939;
 }
 
 .book > button {
   padding: 4px 8px;
   background-color: white;
   cursor: pointer;
+}
+
+.book > button:hover {
+  font-weight: bold;
 }
 
 .book > .delete {
@@ -62,21 +81,31 @@ a:hover {
 .form {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+
 }
 
 .form > input {
-  width: 60%;
+  width: 350px;
   height: 30px;
   padding: 10px;
-  margin: 15px;
+  margin: 15px auto;
   font-family: "Shippori Mincho", serif;
+  border: 1px solid #999999;
+}
+
+.form > input:active {
+  border: 1px solid #000000;
 }
 
 .form > textarea {
   padding: 10px;
+  width: 350px;
+  margin: 15px auto;
+  border: 1px solid #999999;
+}
+
+.form > textarea:active {
+  border: 1px solid #000000;
 }
 
 .form > button {
@@ -86,5 +115,37 @@ a:hover {
   background-color: teal;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 1px solid teal;
+}
+
+.form > button:hover {
+  border: 1px solid teal;
+  background-color: #ffffff;
+  color: teal;
+}
+
+.homeButton {
+  text-align: end;
+  margin-top: 20px;
+  color: #0b5520;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.addBookButton {
+  padding: 15px 35px;
+  margin: 50px;
+  border-radius: 30px 0;
+  background-color: #094812;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.addBookButton:hover {
+  /* color: #ccff00; */
+  background-color: #6ab076;
   cursor: pointer;
 }
